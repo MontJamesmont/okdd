@@ -1,0 +1,23 @@
+/okdd/.DS_Store
+/okdd/node_modules
+/okdd/dist
+
+
+# local env files
+/okdd/.env.local
+/okdd/.env.*.local
+
+# Log files
+/okdd/npm-debug.log*
+/okdd/yarn-debug.log*
+/okdd/yarn-error.log*
+/okdd/pnpm-debug.log*
+
+# Editor directories and files
+/okdd/.idea
+/okdd/.vscode
+/okdd/*.suo
+/okdd/*.ntvs*
+/okdd/*.njsproj
+/okdd/*.sln
+/okdd/*.sw?
