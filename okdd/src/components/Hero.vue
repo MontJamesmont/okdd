@@ -1,9 +1,7 @@
 <template>
   <Section class="hero relative w-full max-w-full" :id="id">
-    <img class="background absolute max-w-screen-lg mx-auto w-full object-cover" src="@/assets/hero.png" alt="">
-    <div class="logoBg absolute h-2/4">
-      <img class="relative inline-block h-full max-w-full mx-auto object-contain" src="@/assets/logo.png" alt="">
-    </div>
+    <img class="background absolute mx-auto w-full object-cover" src="@/assets/hero.jpg" alt="">
+    <img class="logo pt-10 sm:pt-14 md:pt-16 px-5 relative mx-auto object-contain" src="@/assets/logo.png" alt="">
   </Section>
 </template>
 
@@ -27,10 +25,16 @@ export default defineComponent({
     max-width: 100%!important;
     width: 100%!important;
     .background {
-      height: calc(100% - 1px);
+      height: 100%;
     }
-    .logoBg {
-      background: rgba(229, 231, 235, 0.7);
+    .logo {
+      width: 18rem;
+      @media (min-width: 640px) {
+        width: 26rem;
+      }
+      @media (min-width: 768px) {
+        width: 35rem;
+      }
     }
   }
 </style>

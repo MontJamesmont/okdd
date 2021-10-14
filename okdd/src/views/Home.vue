@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <Header :navItems="navItems"></Header>
     <Hero id="hero" class="hero"></Hero>
     <AboutUs :id="navItems[0].hash"></AboutUs>
     <Projects :id="navItems[1].hash"></Projects>
@@ -10,7 +9,6 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import Header from '@/components/Header.vue'
 import Hero from '@/components/Hero.vue'
 import AboutUs from '@/components/AboutUs.vue'
 import Contact from '@/components/Contact.vue'
@@ -24,7 +22,6 @@ export default defineComponent({
     }
   },
   components: {
-    Header,
     Hero,
     AboutUs,
     Contact,
@@ -37,10 +34,16 @@ export default defineComponent({
   .home {
     scroll-behavior: smooth;
     .hero {
-      height: 576px;
+      height: 50vh;
+      @media (min-width: 640px) {
+        height: 75vh;
+      }
+      @media (min-width: 768px) {
+        height: 100vh;
+      }
       :deep {
+        @apply p-0;
         .content {
-          @apply flex justify-center items-center;
           height: 100%;
         }
       }
