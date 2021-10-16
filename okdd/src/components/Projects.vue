@@ -7,13 +7,13 @@
         v-on:click="openGallery(index)"
         :style="{ backgroundColor: project.background ?? '#cabaaa' }"
       >
-        <div class="name text-white text-8xl uppercase flex items-center justify-center p-16">
-          <div class="border border-white whitespace-nowrap flex items-center justify-center p-10">
+        <div class="name text-white text-8xl uppercase flex flex-grow items-center justify-center p-16">
+          <div class="border border-white lg:whitespace-nowrap flex items-center justify-center p-10 text-center">
             {{project.name}}
           </div>
         </div>
         <img
-          class="w-auto align-middle object-cover hidden md:block flex-grow"
+          class="w-auto align-middle object-cover hidden lg:block flex-grow"
           v-if="project.images && project.images.length > 0"
           :src="project.thumbnail ?? project.images[0]"
           alt=""
