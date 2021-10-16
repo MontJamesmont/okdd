@@ -26,6 +26,7 @@ export default defineComponent({
   .banner {
     background-color: #b2bcc0;
     .wrapper {
+      @apply overflow-hidden;
       max-width: 62rem;
       .text {
         font-family: 'Lato-Thin';

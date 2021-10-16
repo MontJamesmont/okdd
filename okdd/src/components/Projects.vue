@@ -1,25 +1,26 @@
 <template>
   <Section class="projects flex" :id="id">
-    <div class="items w-2/4">
+    <div class="items">
       <div
-        class="project relative overflow-hidden cursor-pointer pl-10 pt-5 mb-28"
+        class="project overflow-hidden cursor-pointer mb-16 flex flex-nowrap"
         v-for="(project, index) in projects" :key="index"
         v-on:click="openGallery(index)"
+        :style="{ backgroundColor: project.background ?? '#cabaaa' }"
       >
-        <div class="name text-white text-3xl uppercase mb-5 relative z-10">
-          {{project.name}}
+        <div class="name text-white text-8xl uppercase flex items-center justify-center p-16">
+          <div class="border border-white whitespace-nowrap flex items-center justify-center p-10">
+            {{project.name}}
+          </div>
         </div>
         <img
-          class="w-full align-middle object-cover relative z-10"
+          class="w-auto align-middle object-cover hidden md:block flex-grow"
           v-if="project.images && project.images.length > 0"
           :src="project.thumbnail ?? project.images[0]"
           alt=""
         >
-        <div class="background w-full h-2/4 absolute left-0 top-0" :style="{ backgroundColor: project.background ?? '#cabaaa' }"></div>
         <viewer v-if="galeryOpened === index"></viewer>
       </div>
     </div>
-    <img class="background mx-auto w-2/4 h-full object-contain" src="@/assets/projectsRight.jpg" alt="">
   </Section>
 </template>
 
@@ -82,10 +83,14 @@ export default defineComponent({
 <style scoped lang="scss">
   .projects {
     @apply mb-0 pb-0;
+    font-family: 'Lato-Thin';
     &:deep {
       .content {
-        @apply flex;
+        @apply w-full;
       }
+    }
+    .project {
+      height: 44rem;
     }
   }
 </style>

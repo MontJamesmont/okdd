@@ -28,6 +28,7 @@ export default defineComponent({
     .wrapper {
       max-width: 62rem;
       color: $color;
+      @apply overflow-hidden;
       .box {
         font-family: 'Lato';
         border-color: $color;
