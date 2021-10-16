@@ -1,9 +1,11 @@
 <template>
   <div class="home">
     <Hero id="hero" class="hero"></Hero>
-    <AboutUs :id="navItems[0].hash"></AboutUs>
-    <Projects :id="navItems[1].hash"></Projects>
-    <Contact :id="navItems[2].hash"></Contact>
+    <BannerProject :id="navItems[0].hash"></BannerProject>
+    <BannerStudio :id="navItems[1].hash"></BannerStudio>
+    <AboutUs :id="navItems[2].hash"></AboutUs>
+    <Projects :id="navItems[3].hash"></Projects>
+    <Contact :id="navItems[4].hash"></Contact>
   </div>
 </template>
 
@@ -11,6 +13,8 @@
 import { defineComponent } from 'vue'
 import Hero from '@/components/Hero.vue'
 import AboutUs from '@/components/AboutUs.vue'
+import BannerProject from '@/components/BannerProject.vue'
+import BannerStudio from '@/components/BannerStudio.vue'
 import Contact from '@/components/Contact.vue'
 import Projects from '@/components/Projects.vue'
 
@@ -18,11 +22,13 @@ export default defineComponent({
   name: 'Home',
   data: function () {
     return {
-      navItems: [{ name: 'O nas', hash: 'aboutUs' }, { name: 'Galeria', hash: 'gallery' }, { name: 'Kontakt', hash: 'contact' }]
+      navItems: [{ name: '', hash: 'bannerProject' }, { name: '', hash: 'bannerStudio' }, { name: 'O nas', hash: 'aboutUs' }, { name: 'Galeria', hash: 'gallery' }, { name: 'Kontakt', hash: 'contact' }]
     }
   },
   components: {
     Hero,
+    BannerProject,
+    BannerStudio,
     AboutUs,
     Contact,
     Projects
