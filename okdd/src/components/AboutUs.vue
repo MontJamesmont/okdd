@@ -1,6 +1,6 @@
 <template>
   <Section class="about text-white" :id="id">
-    <div class="left px-16 text-4xl">
+    <div class="left px-16 text-2xl">
       <b>Proces projektowy</b> to przede wszystkim szczegółowa <b>analiza potrzeb Klienta</b>.
       <br>
       Poprzez rozmowę i prezentację adekwatnych przykładów jesteśmy w stanie ustalić jakie są Państwa oczekiwania w kwestii funkcjonalności projektowanej przestrzeni,
@@ -9,7 +9,7 @@
     <div class="logo min-w-full w-full flex lg:w-1/3 items-center justify-center">
       <LogoSquare class="w-full h-full"></LogoSquare>
     </div>
-    <div class="right text-right px-14 text-3xl">
+    <div class="right text-right px-14 text-2xl">
       Nauczeni własnym doświadczeniem wiemy, że istnieje kilka wzorców estetycznych, które wpisują się <br>w gust danego odbiorcy.
     </div>
   </Section>
