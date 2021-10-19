@@ -7,7 +7,7 @@
         v-on:click="openGallery(index)"
         :style="{ backgroundColor: project.background ?? '#cabaaa' }"
       >
-        <div class="name text-white text-8xl uppercase flex flex-grow items-center justify-center p-16">
+        <div class="name text-white uppercase flex flex-grow items-center justify-center p-16">
           <div class="border border-white lg:whitespace-nowrap flex items-center justify-center p-10 text-center">
             {{project.name}}
           </div>
@@ -84,6 +84,8 @@ export default defineComponent({
   .projects {
     @apply mb-0 pb-0;
     font-family: 'Lato-Thin';
+    font-size: 5vw;
+    line-height: 6vw;
     &:deep {
       .content {
         @apply w-full;
