@@ -1,6 +1,6 @@
 <template>
-  <Section class="banner relative w-full max-w-full" :id="id">
-    <div class="wrapper mx-auto">
+  <Section class="banner w-full max-w-full" :id="id">
+    <div class="wrapper">
         <img class="hand object-cover" src="@/assets/BOX1.png" alt="">
     </div>
   </Section>
@@ -26,18 +26,11 @@ export default defineComponent({
     background-color: #b2bcc0;
     padding-right: 0;
     padding: 2;
-    /* height adjusting is a workaround as I didn't know how to set wrapper with background will be around hand pickture */
-    min-height: 26vw;
-    @media (min-width: 640px) {
-      min-height: 22vw;
-      }
-    @media (min-width: 768px) {
-      min-height: 20vw;
-    }
+    overflow: hidden;
 
     .hand {
       float: right;
-      clear: right;
+      clear: both;
       width: 90vw;
       @media (min-width: 640px) {
         width: 80vw;
