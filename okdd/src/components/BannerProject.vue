@@ -1,8 +1,6 @@
 <template>
   <Section class="banner w-full max-w-full" :id="id">
-    <div class="wrapper">
         <img class="hand object-cover" src="@/assets/BOX1.png" alt="">
-    </div>
   </Section>
 </template>
 
