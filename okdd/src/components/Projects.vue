@@ -38,7 +38,7 @@ export default defineComponent({
     return {
       projects: [] as Project[],
       galeryOpened: -1 as number,
-      backgrounds: ['#b3b3ac', '#cabaaa'],
+      backgrounds: ['#a6a59f', '#b3bcc1', '#ac9f94'],
       thumbnails: [
         ''
       ]
