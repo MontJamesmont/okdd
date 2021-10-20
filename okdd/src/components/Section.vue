@@ -1,5 +1,5 @@
 <template>
-  <div :id="id" class="section mx-auto mb-1 p-5">
+  <div :id="id" class="section mx-auto">
     <h1 v-if="title" class="text-3xl mb-10 uppercase">{{title}}</h1>
     <div class="content">
       <slot></slot>
@@ -20,4 +20,7 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
+  .section {
+    margin-bottom: 0.6vw;
+  }
 </style>

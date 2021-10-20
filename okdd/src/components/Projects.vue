@@ -92,6 +92,7 @@ export default defineComponent({
       }
     }
     .project {
+      margin-bottom: 0.6vw;
       height: 44rem;
     }
   }

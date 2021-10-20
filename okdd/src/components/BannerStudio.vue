@@ -22,6 +22,8 @@ export default defineComponent({
 <style scoped lang="scss">
   .banner {
     padding: 2;
+    margin-top: 2vw;
+    margin-bottom: 5vw;
 
     .my_image {
       display:block;
