@@ -22,9 +22,14 @@ export default defineComponent({
 <style scoped lang="scss">
   .banner {
     background-color: #b2bcc0;
+    padding: 3vw;
     padding-right: 0;
-    padding: 2;
     overflow: hidden;
+
+    @media (min-width: 768px) {
+        padding: 0.6vw;
+        padding-right: 0;
+      }
 
     .hand {
       float: right;

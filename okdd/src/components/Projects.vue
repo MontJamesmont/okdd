@@ -7,7 +7,7 @@
         v-on:click="openGallery(index)"
         :style="{ backgroundColor: project.background ?? '#cabaaa' }">
         <div class="name text-white uppercase flex flex-grow items-center justify-center">
-          <div class="border border-white flex items-center justify-center text-center">
+          <div class="border flex items-center justify-center text-center">
             {{project.name}}
           </div>
         </div>
