@@ -5,19 +5,17 @@
         class="project overflow-hidden cursor-pointer mb-16 flex flex-nowrap"
         v-for="(project, index) in projects" :key="index"
         v-on:click="openGallery(index)"
-        :style="{ backgroundColor: project.background ?? '#cabaaa' }"
-      >
-        <div class="name text-white text-8xl uppercase flex flex-grow items-center justify-center p-16">
-          <div class="border border-white lg:whitespace-nowrap flex items-center justify-center p-10 text-center">
+        :style="{ backgroundColor: project.background ?? '#cabaaa' }">
+        <div class="name text-white uppercase flex flex-grow items-center justify-center">
+          <div class="border flex items-center justify-center text-center">
             {{project.name}}
           </div>
         </div>
         <img
-          class="w-auto align-middle object-cover hidden lg:block flex-grow"
+          class="picture"
           v-if="project.images && project.images.length > 0"
           :src="project.thumbnail ?? project.images[0]"
-          alt=""
-        >
+          alt="">
         <viewer v-if="galeryOpened === index"></viewer>
       </div>
     </div>
@@ -38,7 +36,7 @@ export default defineComponent({
     return {
       projects: [] as Project[],
       galeryOpened: -1 as number,
-      backgrounds: ['#b3b3ac', '#cabaaa'],
+      backgrounds: ['#a6a59f', '#b3bcc1', '#ac9f94'],
       thumbnails: [
         ''
       ]
@@ -84,13 +82,27 @@ export default defineComponent({
   .projects {
     @apply mb-0 pb-0;
     font-family: 'Lato-Thin';
+    font-size: 5vw;
+    line-height: 6vw;
     &:deep {
       .content {
         @apply w-full;
       }
     }
     .project {
-      height: 44rem;
+      margin-bottom: 0.6vw;
+    }
+    .name {
+      float: left;
+      width: 50%;
+      padding: 4vw;
+    }
+    .picture {
+      float: right;
+      width: 50%;
+    }
+    .border {
+      padding: 3vw;
     }
   }
 </style>

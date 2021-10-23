@@ -1,9 +1,6 @@
 <template>
-  <Section class="banner p-20" :id="id">
-    <div class="wrapper mx-auto">
-      <div class="text text-center uppercase text-8xl text-white mb-10">Od Kreski Do Deski</div>
-      <div class="box text-center uppercase text-5xl text-white border border-white p-10">Project + Realizacja</div>
-    </div>
+  <Section class="banner w-full max-w-full" :id="id">
+        <img class="hand object-cover" src="@/assets/BOX1.png" alt="">
   </Section>
 </template>
 
@@ -25,17 +22,26 @@ export default defineComponent({
 <style scoped lang="scss">
   .banner {
     background-color: #b2bcc0;
-    .wrapper {
-      @apply overflow-hidden;
-      max-width: 62rem;
-      .text {
-        font-family: 'Lato-Thin';
-        letter-spacing: 2px;
+    padding: 3vw;
+    padding-right: 0;
+    overflow: hidden;
+
+    @media (min-width: 768px) {
+        padding: 0.6vw;
+        padding-right: 0;
       }
-      .box {
-        font-family: 'Lato-Thin';
-        letter-spacing: 8px;
+
+    .hand {
+      float: right;
+      clear: both;
+      width: 90vw;
+      @media (min-width: 640px) {
+        width: 80vw;
+      }
+      @media (min-width: 768px) {
+        width: 74vw;
       }
     }
+
   }
 </style>

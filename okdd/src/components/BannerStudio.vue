@@ -1,9 +1,6 @@
 <template>
-  <Section class="banner p-20" :id="id">
-    <div class="wrapper mx-auto">
-      <div class="box text-center text-5xl border border-white p-10 mb-10">Studio.OKDD - "Od Kreski Do Deski"</div>
-      <div class="text text-center text-4xl">Zajmiemy się Twoim wnętrzem od projektu po jego wykonanie!</div>
-    </div>
+  <Section class="banner w-full max-w-full" :id="id">
+        <img class="my_image object-cover" src="@/assets/BOX2.png" alt="">
   </Section>
 </template>
 
@@ -23,20 +20,20 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-  $color: #696969;
   .banner {
-    .wrapper {
-      max-width: 62rem;
-      color: $color;
-      @apply overflow-hidden;
-      .box {
-        font-family: 'Lato';
-        border-color: $color;
+    padding: 2;
+    margin-top: 2vw;
+    margin-bottom: 5vw;
+
+    .my_image {
+      display:block;
+      margin:auto;
+      width: 90vw;
+      @media (min-width: 640px) {
+        width: 80vw;
       }
-      .text {
-        font-family: 'Lato-Thin';
-        letter-spacing: 1px;
-        border-color: $color;
+      @media (min-width: 768px) {
+        width: 74vw;
       }
     }
   }

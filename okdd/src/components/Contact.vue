@@ -25,7 +25,10 @@ export default defineComponent({
 
 <style scoped lang="scss">
   .contact {
-    @apply pt-0;
+    padding-top: 8vw;
+    @media (min-width: 640px) {
+        padding-top: 2vw;
+      }
     &:deep {
       h1 {
         text-align: center;

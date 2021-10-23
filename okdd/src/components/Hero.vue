@@ -1,7 +1,7 @@
 <template>
   <Section class="hero relative w-full max-w-full" :id="id">
     <img class="background absolute mx-auto w-full object-cover" src="@/assets/hero.jpg" alt="">
-    <img class="logo pt-10 sm:pt-14 md:pt-16 px-5 relative mx-auto object-contain" src="@/assets/logo.png" alt="">
+    <img class="logo pt-6 sm:pt-14 md:pt-16 px-5 relative mx-auto object-contain" src="@/assets/logo.png" alt="">
   </Section>
 </template>
 
