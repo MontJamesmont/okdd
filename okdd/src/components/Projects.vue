@@ -58,6 +58,7 @@ export default defineComponent({
     openGallery (index: number) {
       this.galeryOpened = this.galeryOpened === index ? -1 : index
       this.$viewerApi({
+        options: { button: false, navbar: false, title: false, tooltip: false, movable: false, zoomable: false, rotatable: false, scalable: false, transition: false, fullscreen: false, keyboard: false },
         images: this.projects[index].images
       })
     },
